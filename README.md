@@ -33,7 +33,7 @@ The [variance][variance] for a [negative binomial][negative-binomial-distributio
 <!-- <equation class="equation" label="eq:negative_binomial_variance" align="center" raw="\operatorname{Var}\left( X \right) = \frac{pr}{(1-p)^{2}}" alt="Variance for a negative binomial distribution."> -->
 
 ```math
-\operatorname{Var}\left( X \right) = \frac{pr}{(1-p)^{2}}
+\mathop{\mathrm{Var}}\left( X \right) = \frac{pr}{(1-p)^{2}}
 ```
 
 <!-- <div class="equation" align="center" data-raw-text="\operatorname{Var}\left( X \right) = \frac{pr}{(1-p)^{2}}" data-equation="eq:negative_binomial_variance">
@@ -192,11 +192,6 @@ For more information on the project, filing bug reports and feature requests, an
 
 ---
 
-## License
-
-See [LICENSE][stdlib-license].
-
-
 ## Copyright
 
 Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
@@ -239,8 +234,6 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [umd-url]: https://github.com/stdlib-js/stats-base-dists-negative-binomial-variance/tree/umd
 [esm-url]: https://github.com/stdlib-js/stats-base-dists-negative-binomial-variance/tree/esm
 [branches-url]: https://github.com/stdlib-js/stats-base-dists-negative-binomial-variance/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/stats-base-dists-negative-binomial-variance/main/LICENSE
 
 [negative-binomial-distribution]: https://en.wikipedia.org/wiki/Negative_binomial_distribution
 
