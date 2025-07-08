@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-19)
+## Unreleased (2025-07-08)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ A total of 2 issues were closed in this release:
 
 <details>
 
+-   [`8ea46b6`](https://github.com/stdlib-js/stdlib/commit/8ea46b662dc6e27231d250d101e33a3cf770cd77) - **test:** update descriptions to match language used in JS tests _(by Philipp Burckhardt)_
 -   [`e56f900`](https://github.com/stdlib-js/stdlib/commit/e56f90046337b0074fc6d78e51b045a115e39bb5) - **docs:** remove trailing space _(by Philipp Burckhardt)_
 -   [`516be28`](https://github.com/stdlib-js/stdlib/commit/516be28f24ee80c41f10abd1effee3a98729e707) - **feat:** add C implementation for `stats/base/dists/negative-binomial/variance` [(#3906)](https://github.com/stdlib-js/stdlib/pull/3906) _(by Aadish Jain, Philipp Burckhardt, stdlib-bot)_
 -   [`39f6970`](https://github.com/stdlib-js/stdlib/commit/39f69705826500421b402f732d6a16e204f54dca) - **bench:** refactor random number generation in `stats/base/dists/negative-binomial` [(#5193)](https://github.com/stdlib-js/stdlib/pull/5193) _(by GK Bishnoi)_
