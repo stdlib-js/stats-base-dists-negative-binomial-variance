@@ -62,32 +62,14 @@ where `r` is the number of successes until experiment is stopped and `p` is the 
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/stats-base-dists-negative-binomial-variance
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var variance = require( '@stdlib/stats-base-dists-negative-binomial-variance' );
+import variance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-variance@esm/index.mjs';
 ```
 
 #### variance( r, p )
@@ -149,9 +131,14 @@ v = variance( 20, 1.5 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var randu = require( '@stdlib/random-base-randu' );
-var variance = require( '@stdlib/stats-base-dists-negative-binomial-variance' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
+import variance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-variance@esm/index.mjs';
 
 var v;
 var i;
@@ -164,6 +151,10 @@ for ( i = 0; i < 10; i++ ) {
     v = variance( r, p );
     console.log( 'r: %d, p: %d, Var(X;r,p): %d', r.toFixed( 4 ), p.toFixed( 4 ), v.toFixed( 4 ) );
 }
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -172,99 +163,7 @@ for ( i = 0; i < 10; i++ ) {
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/stats/base/dists/negative-binomial/variance.h"
-```
-
-#### stdlib_base_dists_negative_binomial_variance( r, p )
-
-Returns the variance of a negative binomial distribution with parameters `r` (number of successes until experiment is stopped) and `p` (success probability).
-
-```c
-double v = stdlib_base_dists_negative_binomial_variance( 100.0, 0.2 );
-// returns ~2000.0
-```
-
-The function accepts the following arguments:
-
--   **r**: `[in] double` number of successes until experiment is stopped.
--   **p**: `[in] double` success probability.
-
-```c
-double stdlib_base_dists_negative_binomial_variance( const double r, const double p );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/stats/base/dists/negative-binomial/variance.h"
-#include <stdlib.h>
-#include <stdio.h>
-
-static double random_uniform( const double min, const double max ) {
-    double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
-    return min + ( v*(max-min) );
-}
-
-int main( void ) {
-    double r;
-    double p;
-    double v;
-    int i;
-
-
-    for ( i = 0; i < 10; i++ ) {
-        r = random_uniform( -1.0, 100.0 );
-        p = random_uniform( 0.0, 1.0 );
-        v = stdlib_base_dists_negative_binomial_variance( r, p );
-        printf( "r: %.4f, p: %.4f, Var(X;r,p): %.4f\n", r, p, v );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -291,7 +190,7 @@ int main( void ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
