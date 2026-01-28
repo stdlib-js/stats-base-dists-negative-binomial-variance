@@ -69,7 +69,7 @@ where `r` is the number of successes until experiment is stopped and `p` is the 
 ## Usage
 
 ```javascript
-import variance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-variance@deno/mod.js';
+import variance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-variance@v0.3.0-deno/mod.js';
 ```
 
 #### variance( r, p )
@@ -134,7 +134,7 @@ v = variance( 20, 1.5 );
 ```javascript
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@deno/mod.js';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import variance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-variance@deno/mod.js';
+import variance from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-variance@v0.3.0-deno/mod.js';
 
 var opts = {
     'dtype': 'float64'
