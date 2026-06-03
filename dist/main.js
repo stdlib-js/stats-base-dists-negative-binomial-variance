@@ -1,7 +1,7 @@
-/*
+/**
 * @license Apache-2.0
 *
-* Copyright (c) 2019 The Stdlib Authors.
+* Copyright (c) 2018 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,19 +16,21 @@
 * limitations under the License.
 */
 
-// TypeScript Version: 4.1
+'use strict';
+
+// MODULES //
+
+var isnan = require( '@stdlib/math-base-assert-is-nan' );
+
+
+// MAIN //
 
 /**
 * Returns the variance of a negative binomial distribution.
 *
-* ## Notes
-*
-* -   If provided a `r` which is not a positive number, the function returns `NaN`.
-* -   If `p < 0` or `p > 1`, the function returns `NaN`.
-*
-* @param r - number of successes until experiment is stopped
-* @param p - success probability
-* @returns variance
+* @param {PositiveNumber} r - number of failures until experiment is stopped
+* @param {Probability} p - success probability
+* @returns {PositiveNumber} variance
 *
 * @example
 * var v = variance( 100, 0.2 );
@@ -58,9 +60,20 @@
 * var v = variance( NaN, 0.5 );
 * // returns NaN
 */
-declare function variance( r: number, p: number ): number;
+function variance( r, p ) {
+	if (
+		isnan( r ) ||
+		isnan( p ) ||
+		r <= 0.0 ||
+		p < 0.0 ||
+		p > 1.0
+	) {
+		return NaN;
+	}
+	return ( ( 1.0-p ) * r ) / ( p*p );
+}
 
 
 // EXPORTS //
 
-export = variance;
+module.exports = variance;
