@@ -1,27 +1,5 @@
+"use strict";var s=function(e,r){return function(){try{return r||e((r={exports:{}}).exports,r),r.exports}catch(a){throw (r=0, a)}};};var n=s(function(v,t){
+var i=require('@stdlib/math-base-assert-is-nan/dist');function u(e,r){return i(e)||i(r)||e<=0||r<0||r>1?NaN:(1-r)*e/(r*r)}t.exports=u
+});var c=n();module.exports=c;
 /** @license Apache-2.0 */
-
-'use strict';
-
-/**
-* Negative binomial distribution variance.
-*
-* @module @stdlib/stats-base-dists-negative-binomial-variance
-*
-* @example
-* var variance = require( '@stdlib/stats-base-dists-negative-binomial-variance' );
-*
-* var v = variance( 100, 0.2 );
-* // returns 2000.0
-*
-* v = variance( 20, 0.5 );
-* // returns 40.0
-*/
-
-// MODULES //
-
-var main = require( './main.js' );
-
-
-// EXPORTS //
-
-module.exports = main;
+//# sourceMappingURL=index.js.map
